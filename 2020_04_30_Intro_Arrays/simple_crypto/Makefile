@@ -9,9 +9,9 @@ simple_crypto_test.out: $(OBJECT_FILES)
 	$(CC) -o $@ $^
 
 %.o: %.s
-	as -c -o $@ $<
+	as -c -g -o $@ $<
 %.o: %.c
-	$(CC) -c -o $@ $<
+	$(CC) -g -c -o $@ $<
 
 clean:
 	rm -f $(OBJECT_FILES) $(BINARY_OUTPUT)

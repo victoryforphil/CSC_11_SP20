@@ -1,7 +1,9 @@
 .global clear_keyboard
 .global string_length
 .global display_message
-
+.type   string_length, %function
+.type   clear_keyboard, %function
+.type   display_message, %function
 .text
 .align 4
 /// function: clear_keyboard
@@ -29,7 +31,6 @@ WHL_R0_NE_10:		// ASCII code for '\n' is 13 decimal
 .align 4
 string_length:
 	push {LR}
-
 	mov R1, #0
 	ldrb R2, [R0,R1]	// load byte into R2 from *(R0+R1)
 WHL_R2_NE_NULL:
