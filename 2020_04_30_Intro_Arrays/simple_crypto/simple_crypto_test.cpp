@@ -25,7 +25,7 @@ int main()
 	scanf("%100[^\n]", &message);
 	mlen = string_length(message);
 
-	//clear_keyboard();
+	clear_keyboard();
 
 	printf("Enter your key (up to 100 characters): ");
 	scanf("%100[^\n]", &key);
